@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="programa/script.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
     <title>Login</title>
 </head>
-<body class="">
-    <div class="col-12 bg-dark center mb30">
+<body>
+    <div class="navbar navbar-expand-lg col-12 bg-dark center">
         <h1 class="text-light">Bem vindo ao acesso do sistema</h1>
     </div>
 
-    <div class="container d-flex p20 ">
-        <div class="col h-">
-            <div>
-                <span class="h1 mb-4 text-center">Faça Login</span>
-            </div> 
-    
-            <div class="signin-form">
-                <div class="form-group margin-top-35 justify-content-center">
-                    <div class="m-30 p-8">
-                        <input type="email" name="email" placeholder="E-mail" id="" class="form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg">
+                <div>
+                    <span class="h1 mb-4 text-center">Faça Login</span>
+                </div> 
+                <form id="Login" name="Login" method="get">
+                    <div class="form-group margin-top-35 justify-content-center">
+                        <div class="m-30 p-8">
+                            <input type="email" name="email" placeholder="E-mail" id="" class="form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                        </div>
                     <div class="m-30">
                         <input type="password" name="senha" placeholder="Senha" id="" class="form-control border-top-0 border-right-0 border-left-0 m-35" ><br>
                     </div>
                     <div class="form-group">
-                        <input type="button" value="Login" placeholder="Login" class="btn-primary border-0 rounded form-control btn btn-primary submit px-3"><br>
+                        <input type="submit" value="Entrar" placeholder="Entrar" onclick="validar" class="btn-primary border-0 rounded form-control btn btn-primary submit px-3"><br>
                     </div>
-                    
-                </div>
+                </form>
+                
             </div>
-            
     
             <div>
                 <ul>
@@ -42,35 +41,47 @@
                     </li>
                 </ul>
             </div>
-            
-        </div>
+            </div>
+
     
-        <div class="form col">
+
+        <div class="col">
             <div class="m-35">
-                <span class="h1">Criar cadastro</span>
-            </div>
-            <div>
-                <div>
-                    <input type="text" name="Nome" placeholder="Nome completo" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                </div>
-                <div>
-                    <input type="date" name="data-nascimento" id="" placeholder="Data de nascimento" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                </div>
-                <div>
-                    <input type="number" name="cpf" id="" placeholder="CPF" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                </div>
-                <div>
-                    <input type="password" name="senha" id="" placeholder="Cadastrar senha" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                </div>
-                <div>
-                    <input type="password" name="confirma-senha" id="" placeholder="Confirmar senha" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
-                </div>           
-                <div class="form-group">
-                    <input type="button" value="Cadastrar" placeholder="Cadastrar" class="btn-primary border-0 rounded form-control btn btn-primary submit px-3"><br>
-                </div>
-            </div>
+            <span class="h1">Criar cadastro</span>
         </div>
-    </div>
-    
+        <div>
+
+            <form id="formulario" name="formulario" method="POST" onsubmit="return validar();">
+                <div>
+                    <input type="text" name="Nome" id="nome" placeholder="Nome completo" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                </div>
+
+                <div>
+                    <input type="date" id="data-nascimento" name="data-nascimento" id="" placeholder="Data de nascimento" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                </div>
+                <div>
+                    <input type="number" id="cpf" name="cpf" id="" placeholder="CPF" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                </div>
+                <div>
+                    <input type="password" id="senha" name="senha" id="" placeholder="Cadastrar senha" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                </div>
+                <div>
+                    <input type="password" id="confirma-senha" name="confirma-senha" id="" placeholder="Confirmar senha" class="col form-control border-top-0 border-right-0 border-left-0 m-35"><br>
+                </div>        
+
+                <div class="form-group">
+                    <input type="submit" id="validar" onclick="return validar();" value="Cadastrar" placeholder="Cadastrar" class="btn-primary border-0 rounded form-control btn btn-primary submit px-3"><br>
+                </div>
+            </form>        
+        </div>
+    </div>     
+</div>
+      
+</div>
+
+
+
+<script src="programa/script.js"></script>
 </body>
+
 </html>
