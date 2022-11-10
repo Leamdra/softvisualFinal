@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Cadastro de equipamentos</title>
+  </head>
+  <body class="text-center">
+    <main class="bg-white">
+        <form id="login-form">
+            <h3 class="mb-3">Cadastro</h3>
+            <div class="alert alert-danger d-none alert-heading" role="alert" id="error-msg">
+              Cadastro NÃO realizado !
+              </div>
+              <div class="alert alert-success d-none alert-heading" role="alert" id="success-msg">
+                Sucesso ao cadastrar !!
+                </div>
+            <input type="text" name="equipamento" id="equipamento" placeholder="Equipamento" class="form-control mb-3">
+            <input type="text" name="instalação" id="instalação" placeholder="Local de instalação" class="form-control mb-3">
+            <button type="submit" id="btn-submit" class="btn btn-primary btn-lg btn-block" data-dismiss="alert" >Cadastro</button>
+           
+        </form>
+    </main>
+<script src="script2.js"></script>
+  </body>
+</html>
