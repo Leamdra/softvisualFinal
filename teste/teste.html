@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <form id="equipamento">
+        <div>
+            <h3>cadastrar</h3>
+        </div>
+        <div>
+            <input type="text" name="nomeEquipamento" id="nomeEquipamento" placeholder="Equipamento">
+            <input type="text" name="localInstalação" id="localInstalação" placeholder="Local de instalação">
+            <button onclick="equipamento.cadastrar()">Cadastrar</button>
+            <button onclick="equipamento.excluir()">Excluir</button>
+        </div>
+    </form>
+
+    <div>
+        <h2>Equipamentos</h2>
+        <span>lista de equipamentos</span>
+
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>equipamento</th>
+                <th>local de instalação</th>
+            </thead>
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
